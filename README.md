@@ -251,6 +251,32 @@ jaxl calls create \
   --option "1=Press 1 to connect with the patient:phone=+91<Patient Number>"
 ```
 
+### Route Call Based on Language Preference
+
+```bash
+jaxl calls create \
+  --to "+91<Recipient's Number>" \
+  --from "+91<Purchased Jaxl Number>" \
+  --message "Please select your preferred language. Press 1 for English, Press 2 for Hindi, Press 3 for Spanish." \
+  --option "1=Press 1 for English:team=<English Team ID>" \
+  --option "2=Press 2 for Hindi:team=<Hindi Team ID>" \
+  --option "3=Press 3 for Spanish:team=<Spanish Team ID>"
+```
+
+### Place Outgoing Call for Customer Satisfaction Survey
+
+```bash
+jaxl calls create \
+  --to "+91<Recipient's Number>" \
+  --from "+91<Purchased Jaxl Number>" \
+  --message "We hope you were satisfied with our service. Please rate your experience from 1 to 5." \
+  --option "1=Press 1 for Very Poor:team=<ID>" \
+  --option "2=Press 2 for Poor:team=< ID>" \
+  --option "3=Press 3 for Average:team=< ID>" \
+  --option "4=Press 4 for Good:team=< ID>" \
+  --option "5=Press 5 for Excellent:team=<ID>"
+```
+
 ### Add External Phone Number to an Active Call
 
 ```bash
